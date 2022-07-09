@@ -1,0 +1,431 @@
+26056    20       INFO       _log           MainThread   20:56:56 947.7188587188721  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+26056    10      DEBUG send_mail_from_outlook             Thread-1   21:11:17 875.840425491333 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil213@', 'from': 'npeyyala@techforce.ai', 'to': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': '<!doctype html>\n<html>\n<body><p>The above excel file contains the details of the employees</p><br><br><p>Warm Regards<br>Nikhil Manvesh Peyyala.</p></body>\n</html>', 'body_type': 'html', 'encoding': 'utf-8', 'attachment': 'C:\\Users\\91807\\_Employees_Data_7.xlsx'}
+26056    40      ERROR send_mail_from_outlook             Thread-1   21:11:18 184.75103378295898 {'message': (<class 'KeyError'>, KeyError('host'), <traceback object at 0x00000221A40D3BC0>)}
+26056    40      ERROR log_exception             Thread-1   21:11:18 186.71274185180664 Exception on /send/outlook/mail/ [POST]
+Traceback (most recent call last):
+  File "outlook_mailserver.py", line 36, in send_mail_from_outlook
+    with smtplib.SMTP(pay_load['host'], pay_load['port']) as smtp:
+KeyError: 'host'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "outlook_mailserver.py", line 43, in send_mail_from_outlook
+    return jsonify({'message': (type(ex), sys.exc_info()[1], sys.exc_info()[2])})
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 301, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 131, in dumps
+    return _json.dumps(obj, **kwargs)
+  File "c:\users\91807\anaconda3\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 50, in default
+    return super().default(o)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type type is not JSON serializable
+26056    20       INFO       _log             Thread-1   21:11:18 856.0647964477539 127.0.0.1 - - [08/Jul/2022 21:11:18] "[35m[1mPOST /send/outlook/mail/ HTTP/1.1[0m" 500 -
+23644    20       INFO       _log           MainThread   21:12:09 161.70263290405273  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+23644    10      DEBUG send_mail_from_outlook             Thread-1   21:12:11 428.753137588501 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil213@', 'from': 'npeyyala@techforce.ai', 'to': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': '<!doctype html>\n<html>\n<body><p>The above excel file contains the details of the employees</p><br><br><p>Warm Regards<br>Nikhil Manvesh Peyyala.</p></body>\n</html>', 'body_type': 'html', 'encoding': 'utf-8', 'attachment': 'C:\\Users\\91807\\_Employees_Data_7.xlsx'}
+23644    40      ERROR send_mail_from_outlook             Thread-1   21:12:11 450.7448673248291 {'message': (<class 'KeyError'>, KeyError('host'), <traceback object at 0x00000217BFC39940>)}
+23644    40      ERROR log_exception             Thread-1   21:12:11 451.7800807952881 Exception on /send/outlook/mail/ [POST]
+Traceback (most recent call last):
+  File "outlook_mailserver.py", line 37, in send_mail_from_outlook
+    with smtplib.SMTP(pay_load['host'], pay_load['port']) as smtp:
+KeyError: 'host'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "outlook_mailserver.py", line 44, in send_mail_from_outlook
+    return jsonify({'message': (type(ex), sys.exc_info()[1], sys.exc_info()[2])})
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 301, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 131, in dumps
+    return _json.dumps(obj, **kwargs)
+  File "c:\users\91807\anaconda3\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 50, in default
+    return super().default(o)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type type is not JSON serializable
+23644    20       INFO       _log             Thread-1   21:12:11 455.7816982269287 127.0.0.1 - - [08/Jul/2022 21:12:11] "[35m[1mPOST /send/outlook/mail/ HTTP/1.1[0m" 500 -
+22420    20       INFO       _log           MainThread   21:15:35 965.5699729919434  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+22420    10      DEBUG send_mail_from_outlook             Thread-1   21:15:41 375.6401538848877 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil213@', 'from': 'npeyyala@techforce.ai', 'to': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': '<!doctype html>\n<html>\n<body><p>The above excel file contains the details of the employees</p><br><br><p>Warm Regards<br>Nikhil Manvesh Peyyala.</p></body>\n</html>', 'body_type': 'html', 'encoding': 'utf-8', 'attachment': 'C:\\Users\\91807\\_Employees_Data_7.xlsx', 'host': 'smtp.office365.com', 'port': 587}
+22420    40      ERROR send_mail_from_outlook             Thread-1   21:15:55 352.7975082397461 {'message': (<class 'smtplib.SMTPAuthenticationError'>, SMTPAuthenticationError(535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MAXP287CA0022.INDP287.PROD.OUTLOOK.COM]'), <traceback object at 0x000002DB66A9E740>)}
+22420    40      ERROR log_exception             Thread-1   21:15:55 352.7975082397461 Exception on /send/outlook/mail/ [POST]
+Traceback (most recent call last):
+  File "outlook_mailserver.py", line 39, in send_mail_from_outlook
+    smtp.login(pay_load['user_name'], pay_load['password'])
+  File "c:\users\91807\anaconda3\lib\smtplib.py", line 732, in login
+    raise last_exception
+  File "c:\users\91807\anaconda3\lib\smtplib.py", line 721, in login
+    (code, resp) = self.auth(
+  File "c:\users\91807\anaconda3\lib\smtplib.py", line 644, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MAXP287CA0022.INDP287.PROD.OUTLOOK.COM]')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "outlook_mailserver.py", line 44, in send_mail_from_outlook
+    return jsonify({'message': (type(ex), sys.exc_info()[1], sys.exc_info()[2])})
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 301, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 131, in dumps
+    return _json.dumps(obj, **kwargs)
+  File "c:\users\91807\anaconda3\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 50, in default
+    return super().default(o)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type type is not JSON serializable
+22420    20       INFO       _log             Thread-1   21:15:55 814.3503665924072 127.0.0.1 - - [08/Jul/2022 21:15:55] "[35m[1mPOST /send/outlook/mail/ HTTP/1.1[0m" 500 -
+22420    10      DEBUG send_mail_from_outlook             Thread-2   21:16:36 270.2796459197998 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techforce.ai', 'to': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': '<!doctype html>\n<html>\n<body><p>The above excel file contains the details of the employees</p><br><br><p>Warm Regards<br>Nikhil Manvesh Peyyala.</p></body>\n</html>', 'body_type': 'html', 'encoding': 'utf-8', 'attachment': 'C:\\Users\\91807\\_Employees_Data_7.xlsx', 'host': 'smtp.office365.com', 'port': 587}
+22420    20       INFO send_mail_from_outlook             Thread-2   21:16:46 784.6558094024658 {'message': 'mail sent successfully'}
+22420    20       INFO       _log             Thread-2   21:16:46 785.6557369232178 127.0.0.1 - - [08/Jul/2022 21:16:46] "POST /send/outlook/mail/ HTTP/1.1" 200 -
+22420    10      DEBUG send_mail_from_outlook             Thread-3   21:17:17 691.1182403564453 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techforce.ai', 'to': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': '<!doctype html>\n<html>\n<body><p>The above excel file contains the details of the employees</p><br><br><p>Warm Regards,<br>Nikhil Manvesh Peyyala.</p></body>\n</html>', 'body_type': 'html', 'encoding': 'utf-8', 'attachment': 'C:\\Users\\91807\\_Employees_Data_7.xlsx', 'host': 'smtp.office365.com', 'port': 587}
+22420    20       INFO send_mail_from_outlook             Thread-3   21:17:26 332.0004940032959 {'message': 'mail sent successfully'}
+22420    20       INFO       _log             Thread-3   21:17:26 334.09953117370605 127.0.0.1 - - [08/Jul/2022 21:17:26] "POST /send/outlook/mail/ HTTP/1.1" 200 -
+22628    20       INFO       _log           MainThread   21:17:57 203.33313941955566  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+22628    10      DEBUG send_mail_from_outlook             Thread-1   21:18:13 37.190914154052734 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techforce.ai', 'to': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': '<!doctype html>\n<html>\n<body><p>The above excel file contains the details of the employees</p><br><br><p>Warm Regards,<br>Nikhil Manvesh Peyyala.</p></body>\n</html>', 'body_type': 'html', 'encoding': 'utf-8', 'host': 'smtp.office365.com', 'port': 587}
+22628    20       INFO send_mail_from_outlook             Thread-1   21:18:35 781.4755439758301 {'message': 'mail sent successfully'}
+22628    20       INFO       _log             Thread-1   21:18:35 785.4416370391846 127.0.0.1 - - [08/Jul/2022 21:18:35] "POST /send/outlook/mail/ HTTP/1.1" 200 -
+22628    20       INFO       _log             Thread-2   21:20:48 967.8173065185547 127.0.0.1 - - [08/Jul/2022 21:20:48] "[32mPOST /send/outlook/mail HTTP/1.1[0m" 308 -
+22628    10      DEBUG send_mail_from_outlook             Thread-3   21:20:48 970.8168506622314 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techforce.ai', 'to': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': 'This is just a sample test mail please ignore', 'encoding': 'utf-8', 'host': 'smtp.office365.com', 'port': 587}
+22628    20       INFO send_mail_from_outlook             Thread-3   21:20:58 865.1614189147949 {'message': 'mail sent successfully'}
+22628    20       INFO       _log             Thread-3   21:20:58 868.0288791656494 127.0.0.1 - - [08/Jul/2022 21:20:58] "POST /send/outlook/mail/ HTTP/1.1" 200 -
+19440    20       INFO       _log           MainThread   10:53:45 89.83659744262695  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+19440    10      DEBUG send_mail_from_outlook             Thread-1   11:28:32 610.943078994751 {'user_name': 'npeyyala@techforce.ai', 'passeword': 'Nikhil123@', 'from': 'npeyyala@techfoce.ai', 'to': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\body_for_outlook_mail.html', 'custom_logo_path': 'C:\\Users\\91807\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\_Employees_Data_7.html', 'C:\\Users\\91807\\_Employees_Data_8.html'], 'host': 'smtp.office365.com', 'port': 587}
+19440    40      ERROR send_mail_from_outlook             Thread-1   11:28:32 613.4612560272217 {'message': (<class 'FileNotFoundError'>, FileNotFoundError(2, 'No such file or directory'), <traceback object at 0x0000026354565C40>)}
+19440    40      ERROR log_exception             Thread-1   11:28:32 614.6528720855713 Exception on /send/outlook/mail/ [POST]
+Traceback (most recent call last):
+  File "outlook_mailserver.py", line 31, in send_mail_from_outlook
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\91807\\tech-logo.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "outlook_mailserver.py", line 51, in send_mail_from_outlook
+    except Exception as ex:
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 301, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 131, in dumps
+    return _json.dumps(obj, **kwargs)
+  File "c:\users\91807\anaconda3\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 50, in default
+    return super().default(o)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type type is not JSON serializable
+19440    20       INFO       _log             Thread-1   11:28:32 898.5757827758789 127.0.0.1 - - [09/Jul/2022 11:28:32] "[35m[1mPOST /send/outlook/mail/ HTTP/1.1[0m" 500 -
+19440    10      DEBUG send_mail_from_outlook             Thread-2   11:30:26 807.33323097229 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techfoce.ai', 'to': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\body_for_outlook_mail.html', 'custom_logo_path': 'C:\\Users\\91807\\Downloads\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\_Employees_Data_7.html', 'C:\\Users\\91807\\_Employees_Data_8.html'], 'host': 'smtp.office365.com', 'port': 587}
+19440    40      ERROR send_mail_from_outlook             Thread-2   11:30:26 850.4390716552734 {'message': (<class 'UnboundLocalError'>, UnboundLocalError("local variable 'f' referenced before assignment"), <traceback object at 0x00000263545DAF40>)}
+19440    40      ERROR log_exception             Thread-2   11:30:26 851.4125347137451 Exception on /send/outlook/mail/ [POST]
+Traceback (most recent call last):
+  File "outlook_mailserver.py", line 32, in send_mail_from_outlook
+    if pay_load.get('custom_logo_path'):
+UnboundLocalError: local variable 'f' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "outlook_mailserver.py", line 51, in send_mail_from_outlook
+    except Exception as ex:
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 301, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 131, in dumps
+    return _json.dumps(obj, **kwargs)
+  File "c:\users\91807\anaconda3\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 50, in default
+    return super().default(o)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type type is not JSON serializable
+19440    20       INFO       _log             Thread-2   11:30:26 853.4054756164551 127.0.0.1 - - [09/Jul/2022 11:30:26] "[35m[1mPOST /send/outlook/mail/ HTTP/1.1[0m" 500 -
+19440    10      DEBUG send_mail_from_outlook             Thread-3   11:31:36 215.92402458190918 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techfoce.ai', 'to': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\body_for_outlook_mail.html', 'custom_logo_path': 'C:\\Users\\91807\\Downloads\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\_Employees_Data_7.html', 'C:\\Users\\91807\\_Employees_Data_8.html'], 'host': 'smtp.office365.com', 'port': 587}
+19440    40      ERROR send_mail_from_outlook             Thread-3   11:31:36 216.93849563598633 {'message': (<class 'UnboundLocalError'>, UnboundLocalError("local variable 'f' referenced before assignment"), <traceback object at 0x00000263545E51C0>)}
+19440    40      ERROR log_exception             Thread-3   11:31:36 216.93849563598633 Exception on /send/outlook/mail/ [POST]
+Traceback (most recent call last):
+  File "outlook_mailserver.py", line 32, in send_mail_from_outlook
+    if pay_load.get('custom_logo_path'):
+UnboundLocalError: local variable 'f' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "outlook_mailserver.py", line 51, in send_mail_from_outlook
+    except Exception as ex:
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 301, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 131, in dumps
+    return _json.dumps(obj, **kwargs)
+  File "c:\users\91807\anaconda3\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 50, in default
+    return super().default(o)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type type is not JSON serializable
+19440    20       INFO       _log             Thread-3   11:31:36 218.99080276489258 127.0.0.1 - - [09/Jul/2022 11:31:36] "[35m[1mPOST /send/outlook/mail/ HTTP/1.1[0m" 500 -
+12752    20       INFO       _log           MainThread   11:31:54 505.40852546691895  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+12752    10      DEBUG send_mail_from_outlook             Thread-1   11:31:58 22.821903228759766 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techfoce.ai', 'to': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\body_for_outlook_mail.html', 'custom_logo_path': 'C:\\Users\\91807\\Downloads\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\_Employees_Data_7.html', 'C:\\Users\\91807\\_Employees_Data_8.html'], 'host': 'smtp.office365.com', 'port': 587}
+12752    40      ERROR send_mail_from_outlook             Thread-1   11:31:58 22.821903228759766 {'message': (<class 'KeyError'>, KeyError('cc'), <traceback object at 0x00000150F2055A00>)}
+12752    40      ERROR log_exception             Thread-1   11:31:58 22.821903228759766 Exception on /send/outlook/mail/ [POST]
+Traceback (most recent call last):
+  File "outlook_mailserver.py", line 25, in send_mail_from_outlook
+    msg['CC'] = ','.join(pay_load['cc']) if type(pay_load.get('cc')) == list else pay_load['cc']
+KeyError: 'cc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "outlook_mailserver.py", line 53, in send_mail_from_outlook
+    return jsonify({'message': (type(ex), sys.exc_info()[1], sys.exc_info()[2])})
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 301, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 131, in dumps
+    return _json.dumps(obj, **kwargs)
+  File "c:\users\91807\anaconda3\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 50, in default
+    return super().default(o)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type type is not JSON serializable
+12752    20       INFO       _log             Thread-1   11:31:58 26.966094970703125 127.0.0.1 - - [09/Jul/2022 11:31:58] "[35m[1mPOST /send/outlook/mail/ HTTP/1.1[0m" 500 -
+26168    20       INFO       _log           MainThread   11:37:09 51.50794982910156  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+26168    10      DEBUG send_mail_from_outlook             Thread-1   11:37:14 143.71109008789062 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techfoce.ai', 'to': 'npeyyala@techforce.ai', 'cc': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\body_for_outlook_mail.html', 'custom_logo_path': 'C:\\Users\\91807\\Downloads\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\_Employees_Data_7.html', 'C:\\Users\\91807\\_Employees_Data_8.html'], 'host': 'smtp.office365.com', 'port': 587}
+26168    40      ERROR send_mail_from_outlook             Thread-1   11:37:14 145.64275741577148 {'message': (<class 'UnboundLocalError'>, UnboundLocalError("local variable 'f' referenced before assignment"), <traceback object at 0x0000025749BB1F40>)}
+26168    40      ERROR log_exception             Thread-1   11:37:14 146.6507911682129 Exception on /send/outlook/mail/ [POST]
+Traceback (most recent call last):
+  File "outlook_mailserver.py", line 35, in send_mail_from_outlook
+    image = MIMEImage(f.read())
+UnboundLocalError: local variable 'f' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "outlook_mailserver.py", line 54, in send_mail_from_outlook
+    return jsonify({'message': (type(ex), sys.exc_info()[1], sys.exc_info()[2])})
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 301, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 131, in dumps
+    return _json.dumps(obj, **kwargs)
+  File "c:\users\91807\anaconda3\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 50, in default
+    return super().default(o)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type type is not JSON serializable
+26168    20       INFO       _log             Thread-1   11:37:14 151.70693397521973 127.0.0.1 - - [09/Jul/2022 11:37:14] "[35m[1mPOST /send/outlook/mail/ HTTP/1.1[0m" 500 -
+18428    20       INFO       _log           MainThread   11:37:57 133.0568790435791  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+18428    10      DEBUG send_mail_from_outlook             Thread-1   11:37:59 33.66589546203613 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techfoce.ai', 'to': 'npeyyala@techforce.ai', 'cc': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\body_for_outlook_mail.html', 'custom_logo_path': 'C:\\Users\\91807\\Downloads\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\_Employees_Data_7.html', 'C:\\Users\\91807\\_Employees_Data_8.html'], 'host': 'smtp.office365.com', 'port': 587}
+18428    40      ERROR send_mail_from_outlook             Thread-1   11:37:59 36.69309616088867 {'message': (<class 'FileNotFoundError'>, FileNotFoundError(2, 'No such file or directory'), <traceback object at 0x0000024349186E80>)}
+18428    40      ERROR log_exception             Thread-1   11:37:59 37.66298294067383 Exception on /send/outlook/mail/ [POST]
+Traceback (most recent call last):
+  File "outlook_mailserver.py", line 41, in send_mail_from_outlook
+    with open(file_path, mode='rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\91807\\_Employees_Data_7.html'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "outlook_mailserver.py", line 54, in send_mail_from_outlook
+    return jsonify({'message': (type(ex), sys.exc_info()[1], sys.exc_info()[2])})
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 301, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 131, in dumps
+    return _json.dumps(obj, **kwargs)
+  File "c:\users\91807\anaconda3\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 50, in default
+    return super().default(o)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type type is not JSON serializable
+18428    20       INFO       _log             Thread-1   11:37:59 40.731191635131836 127.0.0.1 - - [09/Jul/2022 11:37:59] "[35m[1mPOST /send/outlook/mail/ HTTP/1.1[0m" 500 -
+27868    20       INFO       _log           MainThread   11:38:29 768.747091293335  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+27868    10      DEBUG send_mail_from_outlook             Thread-1   11:38:33 964.5869731903076 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techfoce.ai', 'to': 'npeyyala@techforce.ai', 'cc': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\body_for_outlook_mail.html', 'custom_logo_path': 'C:\\Users\\91807\\Downloads\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\_Employees_Data_7.xlsx', 'C:\\Users\\91807\\_Employees_Data_8.xlsx'], 'host': 'smtp.office365.com', 'port': 587}
+27868    40      ERROR send_mail_from_outlook             Thread-1   11:39:05 691.7333602905273 {'message': (<class 'smtplib.SMTPDataError'>, SMTPDataError(554, b'5.2.252 SendAsDenied; npeyyala@techforce.ai not allowed to send as npeyyala@techfoce.ai; STOREDRV.Submission.Exception:SendAsDeniedException.MapiExceptionSendAsDenied; Failed to process message due to a permanent exception with message [BeginDiagnosticData]Cannot submit message. 0.35250:0A000A88, 1.36674:0A000000, 1.61250:00000000, 1.45378:02000000, 1.44866:932C0000, 1.36674:0E000000, 1.61250:00000000, 1.45378:982C0000, 1.44866:EC030000, 16.55847:2F120000, 17.43559:0000000024020000000000000000000000000000, 20.52176:140F29951700F01F00000000, 20.50032:140F2995871770201F000130, 0.35180:140F2995, 255.23226:0A000000, 255.27962:0A000000, 255.27962:0E000000, 255.31418:19000000, 0.35250:1F001336, 1.36674:0A000000, 1.61250:00000000, 1.45378:02000000, 1.44866:22000000, 1.36674:32000000, 1.61250:00000000, 1.45378:27000000, 1.44866:01000000, 16.55847:9D000000, 17.43559:0000000090030000000000000000000000000000, 20.52176:140F29951700101064000000, 20.50032:140F2995871700006B000000, 0.35180:69000000, 255.23226:0A001380, 255.27962:0A000000, 255.27962:32000000, 255.17082:DC040000, 0.27745:75000000, 4.21921:DC040000, 255.27962:FA000000, 255.1494:90000000, 0.38698:46000000, 1.41134:46000000, 7.36354:010000000000010B0F010480, 0.37692:86000000, 0.37948:01000000, 5.33852:00000000534D545000000100, 7.36354:010000000000010901000001, 4.56248:DC040000, 7.40748:010000000000010B86000000, 7.57132:000000000000000086000000, 4.39640:DC040000, 1.63016:32000000, 8.45434:22A2B7BCC9597F47A9B97A8F762CA7C686000000, 1.46798:04000000, 5.10786:0000000031352E32302E353431372E3032333A504830505231374D42343837393A39373133393733632D666431372D343431642D393136662D6330323131363765333437633A313635323400, 7.51330:601AAFA09F61DA0865333437, 0.39570:35323400, 1.55954:0A000000, 0.49266:12000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:15000000, 1.56562:00000000, 1.64146:32000000, 1.33010:32000000, 2.54258:DC040000, 255.1750:03003866, 255.31418:F5000000, 0.22753:BE000000, 255.21817:DC040000, 0.64418:FA000000, 4.39842:DC040000, 0.41586:0A002D67, 4.60547:DC040000, 0.21966:C8000000, 4.30158:DC040000[EndDiagnosticData] [Hostname=PH0PR17MB4879.namprd17.prod.outlook.com]'), <traceback object at 0x000002103FAF2EC0>)}
+27868    40      ERROR log_exception             Thread-1   11:39:05 692.7306652069092 Exception on /send/outlook/mail/ [POST]
+Traceback (most recent call last):
+  File "outlook_mailserver.py", line 50, in send_mail_from_outlook
+    smtp.send_message(msg)
+  File "c:\users\91807\anaconda3\lib\smtplib.py", line 968, in send_message
+    return self.sendmail(from_addr, to_addrs, flatmsg, mail_options,
+  File "c:\users\91807\anaconda3\lib\smtplib.py", line 890, in sendmail
+    raise SMTPDataError(code, resp)
+smtplib.SMTPDataError: (554, b'5.2.252 SendAsDenied; npeyyala@techforce.ai not allowed to send as npeyyala@techfoce.ai; STOREDRV.Submission.Exception:SendAsDeniedException.MapiExceptionSendAsDenied; Failed to process message due to a permanent exception with message [BeginDiagnosticData]Cannot submit message. 0.35250:0A000A88, 1.36674:0A000000, 1.61250:00000000, 1.45378:02000000, 1.44866:932C0000, 1.36674:0E000000, 1.61250:00000000, 1.45378:982C0000, 1.44866:EC030000, 16.55847:2F120000, 17.43559:0000000024020000000000000000000000000000, 20.52176:140F29951700F01F00000000, 20.50032:140F2995871770201F000130, 0.35180:140F2995, 255.23226:0A000000, 255.27962:0A000000, 255.27962:0E000000, 255.31418:19000000, 0.35250:1F001336, 1.36674:0A000000, 1.61250:00000000, 1.45378:02000000, 1.44866:22000000, 1.36674:32000000, 1.61250:00000000, 1.45378:27000000, 1.44866:01000000, 16.55847:9D000000, 17.43559:0000000090030000000000000000000000000000, 20.52176:140F29951700101064000000, 20.50032:140F2995871700006B000000, 0.35180:69000000, 255.23226:0A001380, 255.27962:0A000000, 255.27962:32000000, 255.17082:DC040000, 0.27745:75000000, 4.21921:DC040000, 255.27962:FA000000, 255.1494:90000000, 0.38698:46000000, 1.41134:46000000, 7.36354:010000000000010B0F010480, 0.37692:86000000, 0.37948:01000000, 5.33852:00000000534D545000000100, 7.36354:010000000000010901000001, 4.56248:DC040000, 7.40748:010000000000010B86000000, 7.57132:000000000000000086000000, 4.39640:DC040000, 1.63016:32000000, 8.45434:22A2B7BCC9597F47A9B97A8F762CA7C686000000, 1.46798:04000000, 5.10786:0000000031352E32302E353431372E3032333A504830505231374D42343837393A39373133393733632D666431372D343431642D393136662D6330323131363765333437633A313635323400, 7.51330:601AAFA09F61DA0865333437, 0.39570:35323400, 1.55954:0A000000, 0.49266:12000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:15000000, 1.56562:00000000, 1.64146:32000000, 1.33010:32000000, 2.54258:DC040000, 255.1750:03003866, 255.31418:F5000000, 0.22753:BE000000, 255.21817:DC040000, 0.64418:FA000000, 4.39842:DC040000, 0.41586:0A002D67, 4.60547:DC040000, 0.21966:C8000000, 4.30158:DC040000[EndDiagnosticData] [Hostname=PH0PR17MB4879.namprd17.prod.outlook.com]')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "outlook_mailserver.py", line 54, in send_mail_from_outlook
+    return jsonify({'message': (type(ex), sys.exc_info()[1], sys.exc_info()[2])})
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 301, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 131, in dumps
+    return _json.dumps(obj, **kwargs)
+  File "c:\users\91807\anaconda3\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\91807\OutLookMailService_Using_Flask\venv\lib\site-packages\flask\json\__init__.py", line 50, in default
+    return super().default(o)
+  File "c:\users\91807\anaconda3\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type type is not JSON serializable
+27868    20       INFO       _log             Thread-1   11:39:05 808.7871074676514 127.0.0.1 - - [09/Jul/2022 11:39:05] "[35m[1mPOST /send/outlook/mail/ HTTP/1.1[0m" 500 -
+30668    20       INFO       _log           MainThread   11:40:40 891.3614749908447  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+30668    10      DEBUG send_mail_from_outlook             Thread-1   11:40:43 737.581729888916 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techfoce.ai', 'to': 'npeyyala@techforce.ai', 'cc': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\body_for_outlook_mail.html', 'custom_logo_path': 'C:\\Users\\91807\\Downloads\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\_Employees_Data_7.xlsx', 'C:\\Users\\91807\\_Employees_Data_8.xlsx'], 'host': 'smtp.office365.com', 'port': 587}
+30668    40      ERROR send_mail_from_outlook             Thread-1   11:40:57 473.09231758117676 {'message': "(<class 'smtplib.SMTPDataError'>, SMTPDataError(554, b'5.2.252 SendAsDenied; npeyyala@techforce.ai not allowed to send as npeyyala@techfoce.ai; STOREDRV.Submission.Exception:SendAsDeniedException.MapiExceptionSendAsDenied; Failed to process message due to a permanent exception with message [BeginDiagnosticData]Cannot submit message. 0.35250:58040000, 1.36674:01000000, 1.61250:00000000, 1.45378:02000000, 1.44866:00000000, 1.36674:7A000000, 1.61250:00000000, 1.45378:05000000, 1.44866:00140000, 1.36674:0A000000, 1.61250:00000000, 1.45378:16000000, 1.44866:8B2C0000, 1.36674:0E000000, 1.61250:00000000, 1.45378:A42C0000, 1.44866:EC030000, 16.55847:32120000, 17.43559:0000000030020000000000000000000000000000, 20.52176:140F2995170070201F001336, 20.50032:140F29958717101032000000, 0.35180:03000136, 255.23226:1400883F, 255.27962:7A000000, 255.27962:0A000000, 255.27962:0E000000, 255.31418:4A000000, 0.35250:4800D13D, 1.36674:0A000000, 1.61250:00000000, 1.45378:02000000, 1.44866:22000000, 1.36674:32000000, 1.61250:00000000, 1.45378:27000000, 1.44866:01000000, 16.55847:9D000000, 17.43559:0000000090030000000000000000000000000000, 20.52176:140F29951700101073000000, 20.50032:140F2995871700001F000130, 0.35180:78000000, 255.23226:0A004366, 255.27962:0A000000, 255.27962:32000000, 255.17082:DC040000, 0.27745:03000537, 4.21921:DC040000, 255.27962:FA000000, 255.1494:0A001437, 0.38698:05000780, 1.41134:46000000, 7.36354:010000000000010B05000780, 0.37692:86000000, 0.37948:01000000, 5.33852:00000000534D545000000000, 7.36354:010000000000010901000000, 4.56248:DC040000, 7.40748:010000000000010B01000000, 7.57132:000000000000000086000000, 4.39640:DC040000, 1.63016:32000000, 8.45434:22A2B7BCC9597F47A9B97A8F762CA7C601000001, 1.46798:04000000, 5.10786:0000000031352E32302E353431372E3032333A504830505231374D42343837393A39373133393733632D666431372D343431642D393136662D6330323131363765333437633A313635323400, 7.51330:00ED45E39F61DA0835323400, 0.39570:8C11E6C7, 1.55954:0A000000, 0.49266:21000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:12000000, 1.56562:00000000, 1.64146:32000000, 1.33010:32000000, 2.54258:DC040000, 255.1750:0A003267, 255.31418:0A000888, 0.22753:CD000000, 255.21817:DC040000, 0.64418:0A00F77F, 4.39842:DC040000, 0.41586:40000A67, 4.60547:DC040000, 0.21966:D7000000, 4.30158:DC040000[EndDiagnosticData] [Hostname=PH0PR17MB4879.namprd17.prod.outlook.com]'), <traceback object at 0x000001E9E2368E40>)"}
+30668    20       INFO       _log             Thread-1   11:40:57 476.0568141937256 127.0.0.1 - - [09/Jul/2022 11:40:57] "POST /send/outlook/mail/ HTTP/1.1" 200 -
+30668    10      DEBUG send_mail_from_outlook             Thread-2   11:41:59 374.76062774658203 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techforce.ai', 'to': 'npeyyala@techforce.ai', 'cc': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\body_for_outlook_mail.html', 'custom_logo_path': 'C:\\Users\\91807\\Downloads\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\_Employees_Data_7.xlsx', 'C:\\Users\\91807\\_Employees_Data_8.xlsx'], 'host': 'smtp.office365.com', 'port': 587}
+30668    20       INFO send_mail_from_outlook             Thread-2   11:42:11 475.5103588104248 {'message': 'mail sent successfully'}
+30668    20       INFO       _log             Thread-2   11:42:11 477.5121212005615 127.0.0.1 - - [09/Jul/2022 11:42:11] "POST /send/outlook/mail/ HTTP/1.1" 200 -
+26908    20       INFO       _log           MainThread   11:44:10 939.9518966674805  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+26908    10      DEBUG send_mail_from_outlook             Thread-1   11:44:16 329.3447494506836 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techforce.ai', 'to': 'npeyyala@techforce.ai', 'cc': 'npeyyala@techforce.ai', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\body_for_outlook_mail.html', 'body_type': 'html', 'custom_logo_path': 'C:\\Users\\91807\\Downloads\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\_Employees_Data_7.xlsx', 'C:\\Users\\91807\\_Employees_Data_8.xlsx'], 'host': 'smtp.office365.com', 'port': 587}
+26908    20       INFO send_mail_from_outlook             Thread-1   11:44:27 433.4235191345215 {'message': 'mail sent successfully'}
+26908    20       INFO       _log             Thread-1   11:44:27 435.3222846984863 127.0.0.1 - - [09/Jul/2022 11:44:27] "POST /send/outlook/mail/ HTTP/1.1" 200 -
+30644    20       INFO       _log           MainThread   11:56:34 114.20536041259766  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+30644    10      DEBUG send_mail_from_outlook             Thread-1   11:56:38 285.48669815063477 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techforce.ai', 'to': ['npeyyala@techforce.ai', 'nikhilmanvesh@yahoo.com'], 'cc': 'nikhilmanvesh@gmail.com', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\body_for_outlook_mail.html', 'body_type': 'html', 'custom_logo_path': 'C:\\Users\\91807\\Downloads\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\_Employees_Data_7.xlsx', 'C:\\Users\\91807\\_Employees_Data_8.xlsx'], 'host': 'smtp.office365.com', 'port': 587}
+30644    20       INFO send_mail_from_outlook             Thread-1   11:56:49 529.6764373779297 {'message': 'mail sent successfully'}
+30644    20       INFO       _log             Thread-1   11:56:49 531.6708087921143 127.0.0.1 - - [09/Jul/2022 11:56:49] "POST /send/outlook/mail/ HTTP/1.1" 200 -
+30644    10      DEBUG send_mail_from_outlook             Thread-2   12:00:45 870.5596923828125 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techforce.ai', 'to': ['npeyyala@techforce.ai', 'nikhilmanvesh@yahoo.com'], 'cc': 'nikhilmanvesh@gmail.com', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\custom_body_for_outlook_mail.html', 'body_type': 'html', 'custom_logo_path': 'C:\\Users\\91807\\Downloads\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\_Employees_Data_7.xlsx', 'C:\\Users\\91807\\_Employees_Data_8.xlsx'], 'host': 'smtp.office365.com', 'port': 587}
+30644    20       INFO send_mail_from_outlook             Thread-2   12:00:57 854.9139499664307 {'message': 'mail sent successfully'}
+30644    20       INFO       _log             Thread-2   12:00:57 856.9755554199219 127.0.0.1 - - [09/Jul/2022 12:00:57] "POST /send/outlook/mail/ HTTP/1.1" 200 -
+30644    10      DEBUG send_mail_from_outlook             Thread-3   12:03:11 643.4698104858398 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techforce.ai', 'to': ['npeyyala@techforce.ai', 'nikhilmanvesh@yahoo.com'], 'cc': 'nikhilmanvesh@gmail.com', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\custom_body_for_outlook_mail_1.html', 'body_type': 'html', 'custom_logo_path': 'C:\\Users\\91807\\Downloads\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\_Employees_Data_7.xlsx', 'C:\\Users\\91807\\_Employees_Data_8.xlsx'], 'host': 'smtp.office365.com', 'port': 587}
+30644    20       INFO send_mail_from_outlook             Thread-3   12:03:22 175.33159255981445 {'message': 'mail sent successfully'}
+30644    20       INFO       _log             Thread-3   12:03:22 177.3390769958496 127.0.0.1 - - [09/Jul/2022 12:03:22] "POST /send/outlook/mail/ HTTP/1.1" 200 -
+30644    10      DEBUG send_mail_from_outlook             Thread-4   12:06:33 525.4988670349121 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techforce.ai', 'to': ['npeyyala@techforce.ai', 'nikhilmanvesh@yahoo.com'], 'cc': 'nikhilmanvesh@gmail.com', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\custom_body_for_outlook_mail_2.html', 'body_type': 'html', 'custom_logo_path': 'C:\\Users\\91807\\Downloads\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\Documents\\personal_information.docx', 'C:\\Users\\91807\\Downloads\\about_company.pdf'], 'host': 'smtp.office365.com', 'port': 587}
+30644    20       INFO send_mail_from_outlook             Thread-4   12:06:44 415.51947593688965 {'message': 'mail sent successfully'}
+30644    20       INFO       _log             Thread-4   12:06:44 418.60461235046387 127.0.0.1 - - [09/Jul/2022 12:06:44] "POST /send/outlook/mail/ HTTP/1.1" 200 -
+30644    10      DEBUG send_mail_from_outlook             Thread-5   12:08:12 122.13015556335449 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techforce.ai', 'to': ['npeyyala@techforce.ai', 'nikhilmanvesh@yahoo.com'], 'cc': 'nikhilmanvesh@gmail.com', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\custom_body_for_outlook_mail_3.html', 'body_type': 'html', 'custom_logo_path': 'C:\\Users\\91807\\Downloads\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\Documents\\personal_information.docx', 'C:\\Users\\91807\\Downloads\\about_company.pdf'], 'host': 'smtp.office365.com', 'port': 587}
+30644    20       INFO send_mail_from_outlook             Thread-5   12:08:23 74.89919662475586 {'message': 'mail sent successfully'}
+30644    20       INFO       _log             Thread-5   12:08:23 76.85446739196777 127.0.0.1 - - [09/Jul/2022 12:08:23] "POST /send/outlook/mail/ HTTP/1.1" 200 -
+30644    10      DEBUG send_mail_from_outlook             Thread-6   12:09:55 2.1719932556152344 {'user_name': 'npeyyala@techforce.ai', 'password': 'Nikhil123@', 'from': 'npeyyala@techforce.ai', 'to': ['npeyyala@techforce.ai', 'nikhilmanvesh@yahoo.com'], 'cc': 'nikhilmanvesh@gmail.com', 'subject': 'Test-Mail', 'body': 'C:\\Users\\91807\\custom_body_for_outlook_mail_4.html', 'body_type': 'html', 'custom_logo_path': 'C:\\Users\\91807\\Downloads\\tech-logo.png', 'attachments': ['C:\\Users\\91807\\Documents\\personal_information.docx', 'C:\\Users\\91807\\Downloads\\about_company.pdf'], 'host': 'smtp.office365.com', 'port': 587}
+30644    20       INFO send_mail_from_outlook             Thread-6   12:10:06 729.1979789733887 {'message': 'mail sent successfully'}
+30644    20       INFO       _log             Thread-6   12:10:06 731.1978340148926 127.0.0.1 - - [09/Jul/2022 12:10:06] "POST /send/outlook/mail/ HTTP/1.1" 200 -
